@@ -1,0 +1,46 @@
+spring:
+  application:
+  name: bookEssays
+
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost/spring
+#    username: postgres
+#    password: password
+#
+#  jpa:
+#    show-sql: true
+#    generate-ddl: false
+#    hibernate:
+#      ddl-auto: update
+#
+#  properties:
+#    hibernate:
+#      jdbc:
+#      lob:
+#      non_contextual_creation: true
+#
+  datasource:
+    url: jdbc:h2:mem:security-security
+    driverClassName: org.h2.Driver
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  spring:
+    security:
+      user:
+        name: user
+        password: user
+#token:
+#  signing:
+#    key: 53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855
+  server:
+    port: 8080
+    error:
+    include-message: ALWAYS
